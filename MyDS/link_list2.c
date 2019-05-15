@@ -13,15 +13,14 @@ typedef struct node Node;
 
 Node * add(int);
 void list(Node *);
+void Print(void);
 int main (void ){
 	Node * first ;
 	Node * node;
 	int count =0;
 	while(1){
 		int select,value=0;
-		printf("\n (1) add");
-		printf("\n (2) list");
-		printf("\n $: ");
+		Print();
 		scanf("%d",&select);
 		if (select==-1)
 			break;
@@ -69,4 +68,10 @@ void list(Node *node){
 		printf("\n %d",node->data);
 		node=node->next;
 	}
+}
+void Print(){
+	printf("\n (1) add");
+	printf("\n (2) list");
+	printf("\n $: ");
+		
 }
